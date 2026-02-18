@@ -49,7 +49,7 @@
 <script setup>
 defineProps({
   title: String,
-  subtitle: String, // Se mantiene por compatibilidad, aunque el nuevo diseño no lo usa
+  subtitle: String, 
   image: {
     type: String,
     required: true
@@ -58,14 +58,13 @@ defineProps({
     type: Array,
     default: () => []
   },
-  // Nuevas props para que los botones funcionen
   demoUrl: {
     type: String,
-    default: '#'
+    default: ''
   },
   repoUrl: {
     type: String,
-    default: '#'
+    default: ''
   }
 })
 </script>
