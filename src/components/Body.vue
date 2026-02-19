@@ -141,7 +141,13 @@ import BaseList from '../BaseComponents/BaseList.vue'
 import POKEDEX from '../assets/POKEDEX.png'
 import  HOTEL from '../assets/HOTEL.png'
 import  UBIGEO from '../assets/UBIGEO.png'
-const skills = [
+
+interface Skill {
+  id: string;
+  icon: string;
+  title: string;
+}
+const skills: Skill[] = [
   { id: 'js', icon: 'javascript', title: 'JS' },
   { id: 'ts', icon: 'typescript', title: 'TS' },
   { id: 'angular', icon: 'angular', title: 'ANGULAR' },
@@ -157,26 +163,6 @@ const skills = [
   { id: 'python', icon: 'python', title: 'PYTHON' }
 ]
 
-const proyectos = [
-  {
-    title: "SISTEMA EMPRESARIAL",
-    subtitle: "PROYECTO DEMO",
-    image: "https://via.placeholder.com/300", 
-    features: ['Vue.js', 'Node.js', 'AWS']
-  },
-  {
-    title: "E-COMMERCE APP",
-    subtitle: "FULLSTACK B2C",
-    image: "https://via.placeholder.com/300", 
-    features: ['Next.js', 'NestJS', 'PostgreSQL']
-  },
-  {
-    title: "DASHBOARD ADMIN",
-    subtitle: "ANALYTICS UI",
-    image: "https://via.placeholder.com/300", 
-    features: ['React', 'Tailwind', 'Chart.js']
-  }
-]
 </script>
 <style scoped>
 @keyframes fadeInUp {
@@ -187,9 +173,8 @@ const proyectos = [
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* Estilos para Swiper */
 :deep(.swiper-pagination-bullet-active) {
-  background-color: #3b82f6; /* El azul de Oskar */
+  background-color: #3b82f6; 
 }
 
 :deep(.swiper-pagination) {
