@@ -1,6 +1,6 @@
 <template>
   <div class="w-full font-sans bg-slate-300">
-    <section class="bg-[#111827] pt-16 pb-24 text-white">
+    <section id="inicio" class="bg-[#111827] pt-16 pb-24 text-white">
       <div class="max-w-5xl mx-auto px-6">
         <div class="flex flex-col md:flex-row items-center gap-10 animate-fade-in-up">
           <div class="relative">
@@ -19,12 +19,12 @@
             </p>
             
             <div class="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
-              <button class="bg-[#00A3C4] hover:bg-[#008ba8] text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg shadow-cyan-900/20">
+              <a href="https://w.app/pioxnq" target="_blank" rel="noopener" class="bg-[#00A3C4] hover:bg-[#008ba8] text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg shadow-cyan-900/20">
                 Contáctame
-              </button>
-              <button class="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-full font-bold border border-white/10 transition-all flex items-center gap-2">
+              </a>
+              <a href="https://www.linkedin.com/in/oskarmorales/" target="_blank" rel="noopener" class="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-full font-bold border border-white/10 transition-all flex items-center gap-2">
                 <i class="fa-brands fa-linkedin"></i> LinkedIn
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -34,7 +34,7 @@
     <section class="max-w-5xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-12 gap-16">
 
     <div class="lg:col-span-5 space-y-16">
-        <div>
+        <div id="stack">
             <h2 class="text-5xl font-bold mb-8 ">STACK</h2>
             <ul class="grid grid-cols-3 gap-6">
                 <BaseList 
@@ -47,7 +47,7 @@
             </ul>
         </div>
 
-        <div>
+        <div id="experiencia">
             <h2 class=" font-bold text-5xl uppercase mb-8 ">
             Experiencia
             </h2>
@@ -93,7 +93,7 @@
       </div>
 
       <div class="lg:col-span-7 space-y-16 overflow-hidden">
-        <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
+        <div id="sobre-mi" class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
           <h2 class="text-5xl font-bold mb-4 flex items-center gap-2">
             <span>👤</span> SOBRE MI
           </h2>
@@ -102,7 +102,7 @@
           </p>
         </div>
 
-     <div>
+     <div id="proyectos">
         <h2 class="text-5xl font-bold mb-8">PROYECTOS</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -110,20 +110,20 @@
             class="mt-6"
             title="UBIGEO"
             subtitle="UBIGEO"
-            :image="UBIGEO"/>
+            :image="UBIGEO"
+            demoUrl="https://0skarmp.github.io/FirstProjectByGroup/"/>
             <BaseCard
             class="mt-6"
             subtitle="HOTEL VIRTUAL ASISTANT"
             :image="HOTEL"
-            title="HOTEL VIRTUAL ASISTANT"/>
-            <BaseCard
-            class="mt-6"
-            title="test02"/>
+            title="HOTEL VIRTUAL ASISTANT"
+            demoUrl="https://juanrcoder.github.io/Project-Landing_HVA/"/>
             <BaseCard
             class="mt-6"
             subtitle="POKEDEX"
             :image="POKEDEX"
-            title="POKEDEX"/>
+            title="POKEDEX"
+            demoUrl="https://0skarmp.github.io/Basic-Pokedex/"/>
 
         </div>
     </div>
