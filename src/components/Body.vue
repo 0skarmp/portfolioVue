@@ -135,7 +135,6 @@
 
 <script setup lang="ts">
 
-import '@fortawesome/fontawesome-free/css/all.min.css'
 import BaseCard from '../BaseComponents/BaseCard.vue'
 import BaseList from '../BaseComponents/BaseList.vue'
 import POKEDEX from '../assets/POKEDEX.png'
