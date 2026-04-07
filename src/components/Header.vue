@@ -71,7 +71,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, onMounted, onUnmounted, defineProps, defineEmits } from 'vue';
+import { computed, ref, onMounted, onUnmounted} from 'vue';
 
 const props = defineProps<{ language: 'en' | 'es' }>()
 const emit = defineEmits(['toggle-language'])
