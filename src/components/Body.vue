@@ -124,6 +124,12 @@
             :image="POKEDEX"
             title="POKEDEX"
             demoUrl="https://0skarmp.github.io/Basic-Pokedex/"/>
+            <BaseCard
+            class="mt-6"
+            subtitle="Tetris Game"
+            :image="TETRIS"
+            title="Tetris"
+            demoUrl="https://tetris-puce-six.vercel.app/"/>
 
         </div>
     </div>
@@ -138,8 +144,9 @@
 import BaseCard from '../BaseComponents/BaseCard.vue'
 import BaseList from '../BaseComponents/BaseList.vue'
 import POKEDEX from '../assets/POKEDEX.png'
-import  HOTEL from '../assets/HOTEL.png'
-import  UBIGEO from '../assets/UBIGEO.png'
+import HOTEL from '../assets/HOTEL.png'
+import UBIGEO from '../assets/UBIGEO.png'
+import TETRIS from '../assets/Tetris.png'
 
 interface Skill {
   id: string;
