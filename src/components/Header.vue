@@ -1,15 +1,15 @@
-<template>
+﻿<template>
   <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
     <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
       <span class="font-bold text-xl tracking-tighter">OSKARDEV</span>
-      <ul class="hidden md:flex gap-8 text-sm font-medium">
+      <ul class="hidden md:flex gap-6 text-sm font-medium items-center">
         <li>
           <a
             href="#inicio"
             class="hover:text-blue-700 transition-colors cursor-pointer"
             :class="{ 'underline': active === 'inicio' }"
           >
-            Inicio
+            {{ labels.inicio }}
           </a>
         </li>
         <li>
@@ -18,7 +18,7 @@
             class="hover:text-blue-700 transition-colors cursor-pointer"
             :class="{ 'underline': active === 'stack' }"
           >
-            Stack
+            {{ labels.stack }}
           </a>
         </li>
         <li>
@@ -27,7 +27,7 @@
             class="hover:text-blue-700 transition-colors cursor-pointer"
             :class="{ 'underline': active === 'experiencia' }"
           >
-            Experiencia
+            {{ labels.experiencia }}
           </a>
         </li>
         <li>
@@ -36,7 +36,7 @@
             class="hover:text-blue-700 transition-colors cursor-pointer"
             :class="{ 'underline': active === 'proyectos' }"
           >
-            Proyectos
+            {{ labels.proyectos }}
           </a>
         </li>
         <li>
@@ -45,7 +45,7 @@
             class="hover:text-blue-700 transition-colors cursor-pointer"
             :class="{ 'underline': active === 'sobre-mi' }"
           >
-            Sobre mí
+            {{ labels.sobreMi }}
           </a>
         </li>
         <li>
@@ -57,15 +57,43 @@
             Github
           </a>
         </li>
+        <li>
+          <button
+            @click="emit('toggle-language')"
+            class="bg-slate-100 text-slate-800 px-4 py-2 rounded-full text-xs hover:bg-slate-200 transition-all"
+          >
+            Spanish / English
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
+import { computed, ref, onMounted, onUnmounted, defineProps, defineEmits } from 'vue';
 
+const props = defineProps<{ language: 'en' | 'es' }>()
+const emit = defineEmits(['toggle-language'])
 const active = ref<string>(window.location.hash.replace('#', '') || 'inicio');
+
+const labels = computed(() => {
+  return props.language === 'en'
+    ? {
+        inicio: 'Home',
+        stack: 'Stack',
+        experiencia: 'Experience',
+        proyectos: 'Projects',
+        sobreMi: 'About'
+      }
+    : {
+        inicio: 'Inicio',
+        stack: 'Stack',
+        experiencia: 'Experiencia',
+        proyectos: 'Proyectos',
+        sobreMi: 'Sobre mí'
+      }
+})
 
 function updateHash() {
   active.value = window.location.hash.replace('#', '') || 'inicio';
