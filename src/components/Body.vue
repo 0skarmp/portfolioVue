@@ -145,7 +145,6 @@ import { computed } from 'vue'
 import BaseCard from '../BaseComponents/BaseCard.vue'
 import BaseList from '../BaseComponents/BaseList.vue'
 import POKEDEX from '../assets/POKEDEX.png'
-import HOTEL from '../assets/HOTEL.png'
 import UBIGEO from '../assets/UBIGEO.png'
 import TETRIS from '../assets/tetris.png'
 
