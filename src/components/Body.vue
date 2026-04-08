@@ -112,13 +112,13 @@
               :image="UBIGEO"
               demoUrl="https://0skarmp.github.io/FirstProjectByGroup/"
             />
-            <BaseCard
+            <!--<BaseCard
               class="mt-6"
               subtitle="HOTEL VIRTUAL ASISTANT"
               :image="HOTEL"
               title="HOTEL VIRTUAL ASISTANT"
               demoUrl="https://juanrcoder.github.io/Project-Landing_HVA/"
-            />
+            />-->
             <BaseCard
               class="mt-6"
               subtitle="POKEDEX"
