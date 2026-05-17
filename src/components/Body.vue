@@ -118,7 +118,7 @@
               :image="HOTEL"
               title="HOTEL VIRTUAL ASISTANT"
               demoUrl="https://juanrcoder.github.io/Project-Landing_HVA/"
-            />-->
+            />
             <BaseCard
               class="mt-6"
               subtitle="POKEDEX"
@@ -132,7 +132,7 @@
               :image="TETRIS"
               title="Tetris"
               demoUrl="https://tetris-puce-six.vercel.app/"
-            />
+            />-->
           </div>
         </div>
       </div>
