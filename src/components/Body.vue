@@ -105,14 +105,14 @@
           <h2 class="text-5xl font-bold mb-8">{{ t.projects }}</h2>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <BaseCard
+            <!--<BaseCard
               class="mt-6"
               title="UBIGEO"
               subtitle="UBIGEO"
               :image="UBIGEO"
               demoUrl="https://0skarmp.github.io/FirstProjectByGroup/"
             />
-            <!--<BaseCard
+            <BaseCard
               class="mt-6"
               subtitle="HOTEL VIRTUAL ASISTANT"
               :image="HOTEL"
@@ -142,11 +142,11 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import BaseCard from '../BaseComponents/BaseCard.vue'
+//import BaseCard from '../BaseComponents/BaseCard.vue'
 import BaseList from '../BaseComponents/BaseList.vue'
-import POKEDEX from '../assets/POKEDEX.png'
-import UBIGEO from '../assets/UBIGEO.png'
-import TETRIS from '../assets/tetris.png'
+//import POKEDEX from '../assets/POKEDEX.png'
+//import UBIGEO from '../assets/UBIGEO.png'
+//import TETRIS from '../assets/tetris.png'
 
 interface Skill {
   id: string;
